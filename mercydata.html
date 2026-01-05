@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mercy DATA Solution</title>
+</head>
+<body>
+  <header>
+  <h1>MERCY DATA SOLUTION</h1>
+  <h3><strong>⚠️ Note: If you buy 19bob data then you buy another before 24hrs add 3 bob</strong></h3>
+  </header>
+  <br />
+  <br />
+  <br/> 
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+    <h4 class="h4">
+      Steps to follow :<br>
+      Go To Mpesa > then Buy Goods  paste this<h3 style="color:yellow;">6452448</h3><h4 class="h4">as buy goods number > then amount (every thing have it price )> then mpesa pin and boom data occured
+    </h4>
+
+    <button onclick="contact()">CONTACT</button>
+    <button onclick="buy()">Buy now</button>
+  </div>
+  <div class="animated-text">
+    <br />
+    <div class="div">
+      <center>
+        <h2>DATA OFFERS</h2>
+        <h3 style="color:red;">{ buy one package offers per day }</h3>
+      </center>
+      <p>- kes: 19 bob = 1GB, 1 hrs</p>
+      <p>- Kes: 20 bob = 250MB, 24hrs</p>
+      <p>- Kes: 50 bob = 1.5GB, 3hrs</p>
+      <p>- Kes: 99 bob = 1GB, 24hrs</p>
+      <p>- Kes: 49 bob = 350MBs, 7days</p>
+      <p>- Kes: 300 sh =2.5GB, 7days</p>
+      <p>- Kes: 700 sh = 6GB, 7days</p>
+    </div>
+    <div class="div">
+      <center>
+        <h2>TUNIKIWA OFFERS</h2>
+        <h3 style="color:red;">{Buy Many Times}</h3>
+        </center>
+        <p>- Kes: 22 bob = 1GB, 1hrs</p>
+        <p>- Kes: 52 bob = 1.5GB, 3hrs</p>
+        <p>- Kes: 110 bob = 2GB, 24hrs</p>
+    </div>
+    <div class="div">
+      <center>
+        <h2>SMS OFFEERS</h2>
+        <h3 style="color:red;">{Buy Many Time}</h3>
+        </center>
+        <p>-Kes 5bob = 20SMs, 24hrs</p>
+        <p>- Kes 10 bob = 200SMs, 24hrs</p>
+        <p>- Kes 30 bob = 1000SMs, 7days</p>
+    </div>
+    <div class="div">
+      <centre>
+      <h2>MINUTES OFFERS</h2>
+      <h3 style="color:red;">{ Buy Many Time }</h3>
+      </centre>
+      <p>- Kes 21 bob = 45mins, 3hrs</p>
+      <p>- Kes 51 bob = 50mins, midnight</p>
+      <p>- Kes 210 bob = 250mins, 7days</p>
+
+      <h2>MONTHLY OFFERS</h2>
+      <p>- Kes 499 = 2.5GB, 30days</p>
+      <p>- Kes 1000 = 10 GB, 30days</p>
+      <p>- Kes 500 = 300min, 30days</p>
+      <p>- Kes 999 = 1250min, 30days</p>
+      <p>- Kes 1001 = 8GB+ 400min</p>
+  </div>
+  </div>
+  <div class="animated-text">
+  <div id="con"class="div">
+    <button onclick="back()">back</button>
+    <h1>CONTACT</h1>
+    <label for="phone no:">phone no:</label>
+    <input type="tel" value="+254758330323" disabled>
+    <br>
+    <label>link For WhatsApp: </label>
+    <a href="https://wa.me254758330323">254758330323</a>
+         <!-- Time Card -->
+        <div class="card">
+            <h2>⏰ Current Time</h2>
+            <div id="timeDisplay"></div>
+        </div>
+  </div>
+  </div>
+
+  <script>
+  
+document.getElementById("con").style.display = 'none'
+    function contact(){
+      document.querySelector('.animated-text').style.display = "none"
+      document.getElementById("con").style.display = 'block'
+    }
+    function back(){
+      document.getElementById("con").style.display = 'none';
+      document.querySelector('.animated-text').style.display = "block"
+    }
+    function updateTime(){
+            let now = new Date();
+            let timeString = now.toLocaleTimeString();
+            let dateString = now.toLocaleDateString('en-US', { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+            });
+            
+            document.getElementById("timeDisplay").innerHTML = `
+                <p style="font-size: 24px; font-weight: bold; color: #4CAF50;">${timeString}</p>
+                <p style="color:red;">${dateString}</p>
+            `;
+}
+            // Start clock
+            setInterval(updateTime, 1000);
+            updateTime();
+
+console.log('updateTime')
+  </script>
+</body>
+<style>
+body{
+  background: #0013E3;
+}
+.h4{
+  color:lightgreen;
+  font-family: bold;
+  font-style:italic;
+}
+.div{
+  background: #006BFF;
+  margin:5px;
+  padding:10px;
+  border-radius: 15px;
+}
+header{
+  background:green;
+  margin: auto;
+  padding:auto;
+  border-radius: 15px;
+  position:fixed;
+}
+h2{
+  color: #00E9FF;
+}
+.animated-text {
+      animation: slideIn 1s ease-in-out, colorChange 2s infinite alternate;
+      color: white;
+    }
+
+  @keyframes slideIn {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 3;
+      }
+    }
+    input{
+      margin: 5px;
+      padding: 10px;
+      border-radius:8px;
+      color:white;
+    }
+            .card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .dark .card {
+            background: rgba(50, 50, 50, 0.9);
+            color: white;
+        }
+        button{
+          margin:2px;
+          padding: 4px;
+          background: #1420A2;
+          color:yellow;
+          border-radius: 3px;
+        }
+        
+
+</style>
+  </html>
